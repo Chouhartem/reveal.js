@@ -1,0 +1,48 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(./fonts/ibm-plex-mono/ibm-plex-mono.css);
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #f8f9fa;
+
+$mainColor: #0087ff;
+$headingColor: #0087ff;
+
+$mainFontSize: 42px;
+$mainFont: 'IBM Plex Mono', monospace;
+$headingFont: 'IBM Plex Mono', monospace;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #2a76dd;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 1.5em;
+$heading2Size: 1.25em;
+$heading3Size: 1.1em;
+$heading4Size: 1.0em;
+
+$overlayElementBgColor: 0, 0, 0;
+$overlayElementFgColor: 240, 240, 240;
+
+// Change text colors against dark slide backgrounds
+@include dark-bg-text-color(#fff);
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
